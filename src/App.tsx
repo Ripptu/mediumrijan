@@ -33,6 +33,7 @@ import { WordsPullUp } from "./components/WordsPullUp";
 import { WordsPullUpMultiStyle } from "./components/WordsPullUpMultiStyle";
 import { ScrollRevealText } from "./components/ScrollRevealText";
 import TestimonialsSection from "./components/ui/testimonial-v2";
+import { TiltCard } from "./components/TiltCard";
 
 type PageType = "home" | "about" | "contact";
 
@@ -303,7 +304,7 @@ export default function App() {
               className="bg-primary hover:bg-[#E1E0CC] text-black font-semibold text-xs sm:text-sm px-4 sm:px-6 py-2.5 rounded-full transition-all duration-300 flex items-center gap-1.5 shadow-lg shadow-primary/10 active:scale-95 cursor-pointer"
             >
               <span className="hidden sm:inline">Kostenlose</span> Erstanalyse
-              <ArrowRight size={14} />
+              <ArrowRight size={14} strokeWidth={1.5} />
             </button>
           </div>
 
@@ -385,7 +386,7 @@ export default function App() {
                 <div className="relative z-10 w-full max-w-4xl mx-auto mt-12 mb-6">
                   <div className="bg-black/85 backdrop-blur-md rounded-2xl p-6 md:p-8 border border-white/10 shadow-2xl">
                     <h3 className="text-[#E1E0CC] text-base md:text-lg font-medium tracking-wide mb-5 flex items-center gap-2">
-                      <Brain className="text-primary w-5 h-5" />
+                      <Sparkles strokeWidth={1.5} className="text-primary w-5 h-5" />
                       In welchem Bereich benötigst du Unterstützung?
                     </h3>
                     
@@ -404,7 +405,7 @@ export default function App() {
                                 : "bg-[#101010]/50 border-white/5 text-gray-400 hover:border-white/20 hover:text-[#E1E0CC]"
                             }`}
                           >
-                            <IconComponent className={`w-5 h-5 transition-transform duration-300 group-hover:scale-110 ${isSelected ? 'text-primary' : 'text-gray-500'}`} />
+                            <IconComponent strokeWidth={1.5} className={`w-5 h-5 transition-transform duration-300 group-hover:scale-110 ${isSelected ? 'text-primary' : 'text-gray-500'}`} />
                             <span className="text-[10px] sm:text-xs font-medium tracking-wide leading-tight break-words hyphens-auto max-w-full">
                               {service.title}
                             </span>
@@ -416,7 +417,7 @@ export default function App() {
                     {/* CTA to complete */}
                     <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-4 border-t border-white/5">
                       <p className="text-xs text-gray-400 font-light flex items-center gap-2">
-                        <Lock className="text-primary/70 w-3.5 h-3.5" />
+                        <Lock strokeWidth={1.5} className="text-primary/70 w-3.5 h-3.5" />
                         100% diskret & absolut vertrauliche Datenübermittlung
                       </p>
                       <button
@@ -427,7 +428,7 @@ export default function App() {
                           Jetzt kostenfreie Erstanalyse anfordern
                         </span>
                         <div className="bg-black rounded-full w-8 h-8 flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-110">
-                          <ArrowRight className="text-primary w-4 h-4" />
+                          <ArrowRight strokeWidth={1.5} className="text-primary w-4 h-4" />
                         </div>
                       </button>
                     </div>
@@ -457,7 +458,7 @@ export default function App() {
 
                   {/* Trust 2 */}
                   <div className="flex items-center gap-2.5">
-                    <CheckCircle2 className="text-primary w-4 h-4 shrink-0" />
+                    <CheckCircle2 strokeWidth={1.5} className="text-primary w-4 h-4 shrink-0" />
                     <span className="text-xs sm:text-sm font-medium text-[#DEDBC8]">
                       100% Zufriedenheitsgarantie
                     </span>
@@ -465,7 +466,7 @@ export default function App() {
 
                   {/* Trust 3 */}
                   <div className="flex items-center gap-2.5">
-                    <Award className="text-primary w-4 h-4 shrink-0" />
+                    <Award strokeWidth={1.5} className="text-primary w-4 h-4 shrink-0" />
                     <span className="text-xs sm:text-sm font-medium text-[#DEDBC8]">
                       Über 15 Jahre Erfahrung
                     </span>
@@ -473,7 +474,7 @@ export default function App() {
 
                   {/* Trust 4 */}
                   <div className="flex items-center gap-2.5">
-                    <ShieldCheck className="text-primary w-4 h-4 shrink-0" />
+                    <ShieldCheck strokeWidth={1.5} className="text-primary w-4 h-4 shrink-0" />
                     <span className="text-xs sm:text-sm font-medium text-[#DEDBC8]">
                       Seriös & Ehrlich
                     </span>
@@ -481,7 +482,7 @@ export default function App() {
 
                   {/* Trust 5 */}
                   <div className="flex items-center gap-2.5">
-                    <Check className="text-primary w-4 h-4 shrink-0" />
+                    <Check strokeWidth={1.5} className="text-primary w-4 h-4 shrink-0" />
                     <span className="text-xs sm:text-sm font-medium text-[#DEDBC8]">
                       Angemeldetes Gewerbe & Verbandsmitglied
                     </span>
@@ -513,7 +514,7 @@ export default function App() {
                   className="bg-primary hover:bg-[#E1E0CC] text-black font-semibold text-sm px-8 py-3.5 rounded-full transition-all duration-300 shadow-xl shadow-primary/5 active:scale-95 inline-flex items-center gap-2.5 cursor-pointer"
                 >
                   <span>Jetzt kostenfreie Erstanalyse anfordern</span>
-                  <ArrowRight size={16} />
+                  <ArrowRight size={16} strokeWidth={1.5} />
                 </button>
               </div>
             </section>
@@ -542,15 +543,15 @@ export default function App() {
                   {services.map((service, index) => {
                     const IconComponent = service.icon;
                     return (
-                      <div
+                      <TiltCard
                         key={service.id}
-                        className="bg-[#101010] hover:bg-[#151515] rounded-2xl p-6 md:p-8 border border-white/5 hover:border-white/10 transition-all duration-300 flex flex-col justify-between group"
+                        className="p-6 md:p-8 flex flex-col justify-between h-full"
                       >
                         <div>
                           {/* Header of card */}
                           <div className="flex justify-between items-start mb-6">
                             <div className="bg-neutral-900 p-3 rounded-xl border border-white/5 text-primary group-hover:scale-110 transition-transform duration-300">
-                              <IconComponent className="w-6 h-6" />
+                              <IconComponent strokeWidth={1.5} className="w-6 h-6" />
                             </div>
                             <span className="font-mono text-xs text-[#DEDBC8]/40 tracking-wider font-light">
                               0{index + 1}
@@ -569,7 +570,7 @@ export default function App() {
                           <div className="border-t border-white/5 pt-4 space-y-2">
                             {service.details.map((detail, idx) => (
                               <div key={idx} className="flex items-center gap-2">
-                                <Check className="text-primary w-3.5 h-3.5 shrink-0" />
+                                <Check strokeWidth={1.5} className="text-primary w-3.5 h-3.5 shrink-0" />
                                 <span className="text-xs text-gray-500 font-light">{detail}</span>
                               </div>
                             ))}
@@ -586,18 +587,21 @@ export default function App() {
                           className="mt-8 flex items-center gap-1.5 text-xs text-primary font-medium hover:text-white transition-colors self-start group/btn cursor-pointer"
                         >
                           <span>Analyse starten</span>
-                          <ArrowRight size={14} className="transform -rotate-45 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform duration-300" />
+                          <ArrowRight size={14} strokeWidth={1.5} className="transform -rotate-45 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform duration-300" />
                         </button>
 
-                      </div>
+                      </TiltCard>
                     );
                   })}
 
                   {/* Trust Promo Card to balance layout */}
-                  <div className="bg-gradient-to-br from-neutral-950 to-[#101010] rounded-2xl p-8 border border-primary/20 flex flex-col justify-between lg:col-span-1 md:col-span-2">
+                  <TiltCard
+                    containerClassName="lg:col-span-1 md:col-span-2"
+                    className="p-8 flex flex-col justify-between h-full bg-gradient-to-br from-neutral-950 to-[#101010] border border-primary/20 hover:border-primary/40"
+                  >
                     <div>
                       <div className="bg-primary/10 p-3.5 rounded-xl text-primary w-fit mb-6">
-                        <Lock className="w-6 h-6" />
+                        <Lock strokeWidth={1.5} className="w-6 h-6" />
                       </div>
                       <h3 className="text-xl font-medium text-white tracking-tight mb-4">
                         Absolute Diskretion & Transparenz
@@ -608,10 +612,10 @@ export default function App() {
                     </div>
 
                     <div className="flex items-center gap-3 bg-white/2 p-3 rounded-xl border border-white/5">
-                      <ShieldCheck className="text-primary w-5 h-5 shrink-0" />
+                      <ShieldCheck strokeWidth={1.5} className="text-primary w-5 h-5 shrink-0" />
                       <span className="text-xs text-[#DEDBC8] font-light">Verifiziertes & angemeldetes Gewerbe</span>
                     </div>
-                  </div>
+                  </TiltCard>
 
                 </div>
 
@@ -622,7 +626,7 @@ export default function App() {
                     className="bg-primary hover:bg-[#E1E0CC] text-black font-semibold text-sm px-8 py-3.5 rounded-full transition-all duration-300 inline-flex items-center gap-2.5 shadow-xl shadow-primary/5 active:scale-95 cursor-pointer"
                   >
                     <span>Analyse für meine Situation starten</span>
-                    <ArrowRight size={16} />
+                    <ArrowRight size={16} strokeWidth={1.5} />
                   </button>
                 </div>
 
@@ -681,7 +685,7 @@ export default function App() {
                         className="bg-white/5 hover:bg-white/10 text-[#E1E0CC] border border-white/10 hover:border-white/20 px-6 py-3 rounded-full text-xs sm:text-sm font-medium transition-all duration-300 cursor-pointer inline-flex items-center gap-2"
                       >
                         <span>Vollständige Story lesen</span>
-                        <ArrowRight size={14} />
+                        <ArrowRight size={14} strokeWidth={1.5} />
                       </button>
 
                       <button
@@ -689,7 +693,7 @@ export default function App() {
                         className="bg-primary hover:bg-[#E1E0CC] text-black px-6 py-3 rounded-full text-xs sm:text-sm font-semibold transition-all duration-300 cursor-pointer inline-flex items-center gap-2 shadow-lg shadow-primary/5"
                       >
                         <span>Jetzt Erstanalyse anfordern</span>
-                        <ArrowRight size={14} />
+                        <ArrowRight size={14} strokeWidth={1.5} />
                       </button>
                     </div>
 
@@ -715,7 +719,7 @@ export default function App() {
                   {/* Association 1 */}
                   <div className="bg-black/40 border border-white/5 rounded-2xl p-6 flex flex-col items-center text-center hover:border-primary/25 transition-colors">
                     <div className="bg-neutral-900 w-12 h-12 rounded-full flex items-center justify-center border border-white/10 mb-4">
-                      <Award className="text-primary w-6 h-6" />
+                      <Award strokeWidth={1.5} className="text-primary w-6 h-6" />
                     </div>
                     <h4 className="text-white text-sm font-semibold mb-2">DAV e.V.</h4>
                     <p className="text-gray-400 text-xs font-light leading-relaxed">
@@ -726,7 +730,7 @@ export default function App() {
                   {/* Association 2 */}
                   <div className="bg-black/40 border border-white/5 rounded-2xl p-6 flex flex-col items-center text-center hover:border-primary/25 transition-colors">
                     <div className="bg-neutral-900 w-12 h-12 rounded-full flex items-center justify-center border border-white/10 mb-4">
-                      <Brain className="text-primary w-6 h-6" />
+                      <Brain strokeWidth={1.5} className="text-primary w-6 h-6" />
                     </div>
                     <h4 className="text-white text-sm font-semibold mb-2">VFP e.V.</h4>
                     <p className="text-gray-400 text-xs font-light leading-relaxed">
@@ -737,7 +741,7 @@ export default function App() {
                   {/* Association 3 */}
                   <div className="bg-black/40 border border-white/5 rounded-2xl p-6 flex flex-col items-center text-center hover:border-primary/25 transition-colors">
                     <div className="bg-neutral-900 w-12 h-12 rounded-full flex items-center justify-center border border-white/10 mb-4">
-                      <ShieldCheck className="text-primary w-6 h-6" />
+                      <ShieldCheck strokeWidth={1.5} className="text-primary w-6 h-6" />
                     </div>
                     <h4 className="text-white text-sm font-semibold mb-2">VUH e.V.</h4>
                     <p className="text-gray-400 text-xs font-light leading-relaxed">
@@ -801,15 +805,15 @@ export default function App() {
                   
                   <div className="mt-6 pt-6 border-t border-white/5 text-left space-y-4">
                     <div className="flex items-center gap-3">
-                      <Award className="text-primary w-4 h-4 shrink-0" />
+                      <Award strokeWidth={1.5} className="text-primary w-4 h-4 shrink-0" />
                       <span className="text-xs text-gray-400 font-light">15+ Jahre professionelle Seelenbegleitung</span>
                     </div>
                     <div className="flex items-center gap-3">
-                      <Brain className="text-primary w-4 h-4 shrink-0" />
+                      <Brain strokeWidth={1.5} className="text-primary w-4 h-4 shrink-0" />
                       <span className="text-xs text-gray-400 font-light">In Ausbildung zum Heilpraktiker f. Psychotherapie</span>
                     </div>
                     <div className="flex items-center gap-3">
-                      <ShieldCheck className="text-primary w-4 h-4 shrink-0" />
+                      <ShieldCheck strokeWidth={1.5} className="text-primary w-4 h-4 shrink-0" />
                       <span className="text-xs text-gray-400 font-light">Absolute Schweigepflicht & Diskretion</span>
                     </div>
                   </div>
@@ -820,16 +824,16 @@ export default function App() {
                   <h4 className="text-[#E1E0CC] text-sm font-semibold mb-3">Ausbildungsschwerpunkte</h4>
                   <ul className="space-y-2 text-xs text-gray-400 font-light">
                     <li className="flex items-center gap-2">
-                      <Check className="text-primary w-3.5 h-3.5" /> Mediale & sensitive Heilarbeit
+                      <Check strokeWidth={1.5} className="text-primary w-3.5 h-3.5" /> Mediale & sensitive Heilarbeit
                     </li>
                     <li className="flex items-center gap-2">
-                      <Check className="text-primary w-3.5 h-3.5" /> Tiefenpsychologische Blockadenauflösung
+                      <Check strokeWidth={1.5} className="text-primary w-3.5 h-3.5" /> Tiefenpsychologische Blockadenauflösung
                     </li>
                     <li className="flex items-center gap-2">
-                      <Check className="text-primary w-3.5 h-3.5" /> Energetische Reinigung & Aura-Schutz
+                      <Check strokeWidth={1.5} className="text-primary w-3.5 h-3.5" /> Energetische Reinigung & Aura-Schutz
                     </li>
                     <li className="flex items-center gap-2">
-                      <Check className="text-primary w-3.5 h-3.5" /> Karmische Konfliktlösungen
+                      <Check strokeWidth={1.5} className="text-primary w-3.5 h-3.5" /> Karmische Konfliktlösungen
                     </li>
                   </ul>
                 </div>
@@ -875,7 +879,7 @@ export default function App() {
                     className="bg-primary hover:bg-[#E1E0CC] text-black font-semibold text-xs sm:text-sm px-6 py-3 rounded-full transition-all duration-300 flex items-center gap-2 cursor-pointer shadow-lg shadow-primary/5"
                   >
                     <span>Kostenlose Erstanalyse anfragen</span>
-                    <ArrowRight size={14} />
+                    <ArrowRight size={14} strokeWidth={1.5} />
                   </button>
                 </div>
 
@@ -926,7 +930,7 @@ export default function App() {
                     {/* Phone */}
                     <div className="flex items-start gap-3">
                       <div className="bg-neutral-900 p-2.5 rounded-lg border border-white/5 text-primary">
-                        <Phone size={16} />
+                        <Phone size={16} strokeWidth={1.5} />
                       </div>
                       <div>
                         <span className="text-gray-500 text-[10px] uppercase font-mono">Telefon</span>
@@ -939,7 +943,7 @@ export default function App() {
                     {/* WhatsApp */}
                     <div className="flex items-start gap-3">
                       <div className="bg-neutral-900 p-2.5 rounded-lg border border-white/5 text-primary">
-                        <MessageSquare size={16} />
+                        <MessageSquare size={16} strokeWidth={1.5} />
                       </div>
                       <div>
                         <span className="text-gray-500 text-[10px] uppercase font-mono">WhatsApp</span>
@@ -955,7 +959,7 @@ export default function App() {
                 {/* Important Notice Box */}
                 <div className="bg-[#212121]/40 border border-white/5 rounded-2xl p-6">
                   <h4 className="text-[#DEDBC8] text-xs font-semibold uppercase tracking-wider mb-2 flex items-center gap-1.5">
-                    <Activity className="w-3.5 h-3.5 text-primary" />
+                    <Sparkles strokeWidth={1.5} className="w-3.5 h-3.5 text-primary" />
                     Wie geht es weiter?
                   </h4>
                   <ol className="space-y-3 text-xs text-gray-400 font-light list-decimal pl-4 mt-3">
@@ -1116,7 +1120,7 @@ export default function App() {
                           className="w-full bg-primary hover:bg-[#E1E0CC] text-black font-semibold text-xs sm:text-sm py-3 rounded-xl transition-all duration-300 flex items-center justify-center gap-1.5 shadow-lg shadow-primary/10 cursor-pointer disabled:opacity-50"
                         >
                           <span>{submitting ? "Übertrage Daten..." : "Kostenfreie Erstanalyse jetzt absenden"}</span>
-                          <Send size={14} className={submitting ? "animate-pulse" : ""} />
+                          <Send size={14} strokeWidth={1.5} className={submitting ? "animate-pulse" : ""} />
                         </button>
 
                       </motion.form>
@@ -1129,7 +1133,7 @@ export default function App() {
                         exit={{ opacity: 0, scale: 0.95 }}
                       >
                         <div className="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center mb-6 relative">
-                          <Check className="text-primary w-8 h-8" />
+                          <Check strokeWidth={1.5} className="text-primary w-8 h-8" />
                           <div className="absolute inset-0 rounded-full border border-primary/40 animate-ping opacity-70" />
                         </div>
                         <h3 className="text-xl font-medium text-white tracking-tight">Erfolgreich übermittelt</h3>
@@ -1187,11 +1191,11 @@ export default function App() {
               </h4>
               <ul className="space-y-2.5 text-xs text-gray-400 font-light">
                 <li className="flex items-center gap-2.5">
-                  <Phone size={13} className="text-primary" />
+                  <Phone size={13} strokeWidth={1.5} className="text-primary" />
                   <span>Telefon: <a href="tel:+4915734404851" className="text-white hover:text-primary transition-colors">+49 1573 4404851</a></span>
                 </li>
                 <li className="flex items-center gap-2.5">
-                  <MessageSquare size={13} className="text-primary" />
+                  <MessageSquare size={13} strokeWidth={1.5} className="text-primary" />
                   <span>WhatsApp: <a href="https://wa.me/4915510582407" target="_blank" rel="noreferrer" className="text-white hover:text-primary transition-colors">+49 1551 0582407</a></span>
                 </li>
               </ul>
