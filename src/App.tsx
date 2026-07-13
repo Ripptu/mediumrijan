@@ -85,36 +85,36 @@ export default function App() {
       id: "Partnerrückführung",
       title: "Partnerrückführung",
       icon: Heart,
-      text: "Liebeskummer bewältigen und verlorene Liebe neu entfachen. Wir arbeiten auf energetischer Ebene daran, die Blockaden zwischen dir und deinem Ex-Partner zu lösen, damit eine harmonische Annäherung wieder möglich wird.",
+      text: "Die Partnerrückführung ist ein kraftvoller Prozess, der dir hilft, verloren geglaubte Beziehungen wiederherzustellen. Ich unterstütze dich dabei, die emotionalen und energetischen Verbindungen zu deinem Seelenpartner zu stärken, damit ihr wieder zueinander findet. Mit meiner einfühlsamen Anleitung erforschen wir gemeinsam, wie alte Muster durchbrochen werden können, um eine liebevolle und harmonische Wiedervereinigung zu ermöglichen.",
       details: ["Lösung von Trennungsursachen", "Emotionale Blockaden abbauen", "Energetische Wiederannäherung", "Nachhaltige Beziehungsstabilisierung"]
     },
     {
       id: "Partnerzusammenführung",
       title: "Partnerzusammenführung",
       icon: HeartHandshake,
-      text: "Seelenpartner zusammenbringen und bestehende Beziehungen stärken. Wenn Missverständnisse und emotionale Distanz die Liebe gefährden, helfe ich euch dabei, energetisch wieder zueinanderzufinden.",
+      text: "Die Partnerzusammenführung zielt darauf ab, dich mit deinem Wunschpartner zusammenzubringen und eine glückliche, harmonische Beziehung zu ermöglichen. Ich arbeite mit verschiedenen spirituellen Techniken, um die energetischen Blockaden zu identifizieren, die zwischen euch stehen könnten. Gemeinsam schaffen wir die Voraussetzungen für eine tiefe Verbindung und eine erfüllte Partnerschaft, die auf Liebe und Vertrauen basiert.",
       details: ["Seelenpartner-Verbindung", "Kommunikation harmonisieren", "Schutz vor äußeren Störungen", "Vertrauensbasis neu aufbauen"]
     },
     {
       id: "Kartenlegen",
       title: "Kartenlegen",
       icon: Compass,
-      text: "Ein tiefer Blick in deine Zukunft und Gegenwart. Erhalte klare Antworten auf drängende Lebensfragen, lüfte Unsicherheiten im Bereich Liebe, Beruf oder Finanzen und finde deinen optimalen Entscheidungsweg.",
+      text: "Beim Kartenlegen erhalte ich wertvolle Einblicke in deine Lebenssituation und die Herausforderungen, vor denen du stehst. Die Karten bieten eine klare Perspektive auf deine Fragen und helfen dir, Entscheidungen mit mehr Klarheit zu treffen. Ich begleite dich durch die Deutung der Karten und enthülle die Botschaften, die das Universum für dich bereithält. Lass uns gemeinsam die Antworten finden, die du suchst.",
       details: ["Detaillierte Zukunftsprognosen", "Klarheit bei Lebensentscheidungen", "Liebe & Partnerschafts-Analysen", "Ursachenforschung bei Stagnation"]
     },
     {
-      id: "Fluchbefreiung",
-      title: "Fluchbefreiung",
-      icon: Sun,
-      text: "Befreiung von negativen Energien, Fremdeinflüssen und alten energetischen Lasten. Wir reinigen deine Aura und schaffen einen kraftvollen Schutz, damit du wieder frei aufatmen kannst.",
-      details: ["Aura- & Chakrenreinigung", "Neutralisierung von Flüchen", "Befreiung von Besetzungen", "Energetischer Dauerschutz"]
+      id: "Blockadenauflösung",
+      title: "Blockadenauflösung",
+      icon: Unlock,
+      text: "Die Blockadenauflösung ist ein entscheidender Schritt, um emotionale und energetische Hindernisse in deinem Leben zu beseitigen. Ich helfe dir, die Ursachen dieser Blockaden zu identifizieren und zu transformieren, damit du wieder frei und unbeschwert leben kannst. Mit gezielten Methoden unterstütze ich dich, um alte Muster loszulassen und Raum für neues Wachstum und positive Veränderungen zu schaffen.",
+      details: ["Karmische Verstrickungen lösen", "Ängste & Glaubenssätze auflösen", "Aktivierung der Selbstheilung", "Chakra-Harmonisierung"]
     },
     {
-      id: "Blockadenlösung",
-      title: "Blockadenlösung",
-      icon: Unlock,
-      text: "Lösen von karmischen, mentalen und seelischen Blockaden. Bringe deinen inneren Energiefluss zurück ins Gleichgewicht, um dein volles Potenzial im Leben wieder zu entfalten.",
-      details: ["Karmische Verstrickungen lösen", "Ängste & Glaubenssätze auflösen", "Aktivierung der Selbstheilung", "Chakra-Harmonisierung"]
+      id: "Handlesung",
+      title: "Handlesung",
+      icon: Sparkles,
+      text: "Das Handlesen ist eine alte Kunst, die dir wertvolle Informationen über deine Lebenslinie und deine zukünftigen Möglichkeiten bietet. Durch die Analyse deiner Handlinien und -merkmale erkenne ich wichtige Aspekte deiner Persönlichkeit und deines Lebensweges. Diese Einblicke können dir helfen, besser zu verstehen, wo deine Stärken und Herausforderungen liegen und wie du dein volles Potenzial entfalten kannst.",
+      details: ["Charakteranalyse & Potenziale", "Erkennung von Lebenswenden", "Liebes- & Herzlinien-Deutung", "Individuelle Lebenspfad-Orientierung"]
     }
   ];
 
